@@ -1,6 +1,7 @@
 pandas
 numpy
 dvc
+argparse
 
 
 #Installing the local setup
