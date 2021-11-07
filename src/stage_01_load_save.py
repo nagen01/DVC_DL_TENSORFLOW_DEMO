@@ -2,10 +2,10 @@ from src.utils.all_utils import read_yaml, create_directory
 import argparse
 import logging
 import os
-import tqdm
+from tqdm import tqdm
 import shutil
 
-logging_str = "[%(asctime)s: %(lavelname)s: %(module)s: %(message)s]"
+logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
 log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(filename=os.path.join(log_dir,"running_logs.log"), level=logging.INFO, 
@@ -26,12 +26,12 @@ def get_data(config_path):
     source_download_dirs = config["source_download_dirs"]
     local_data_dirs = config["local_data_dirs"]
 
-    for source_download_dir, local_data_dir in tqdm(zip(source_download_dirs, local_data_dirs), total=2, desc="list_of_folders", colour="red"):
+    for source_download_dir, local_data_dir in tqdm(zip(source_download_dirs, local_data_dirs), total=2, desc= "list of folders", colour="red"):
         create_directory([local_data_dir])
         copy_data(source_download_dir, local_data_dir)
 
 if __name__ == "__main__":
-    args = argparse.ArgumentParse()
+    args = argparse.ArgumentParser()
     args.add_argument("--config", "-c", default="config/config.yaml")
     parsed_args = args.parse_args()
     try:

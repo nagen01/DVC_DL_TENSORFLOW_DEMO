@@ -10,6 +10,6 @@ def read_yaml(path_to_yaml:str) -> dict:
 
 def create_directory(dirs:list):
     for dir in dirs:
-        os.mkdir(dir, exist_ok=True)
+        os.makedirs(dir, exist_ok=True)
         logging.info(f"directory is created at {dir}")
 
