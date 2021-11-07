@@ -11,6 +11,7 @@ os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(filename=os.path.join(log_dir,"running_logs.log"), level=logging.INFO, 
                     format=logging_str, filemode="a")
 
+Stage = "One"
 
 def copy_data(source_dir, target_dir):
     list_of_files = os.listdir(source_dir)
