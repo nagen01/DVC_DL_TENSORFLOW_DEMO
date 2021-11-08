@@ -2,7 +2,7 @@ pandas
 numpy
 dvc
 argparse
-
+tensorflow
 
 #Installing the local setup
 -e .
