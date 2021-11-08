@@ -8,3 +8,19 @@ stages:
       - config/config.yaml
     outs:
       - data
+
+  prepare_base_model:
+    cmd:
+      - python src/stage_02_prepare_base_model.py --config=config/config.yaml --params=params.yaml
+    deps:
+      - src/stage_02_prepare_base_model.py
+      - src/utils/all_utils.py
+      - src/utils/models.py
+      - config/config.yaml
+      - data
+    params:
+      - IMAGE_SIZE
+      - CLASSES
+      - LEARNING_RATE
+    outs:
+      - artifacts\base_model
