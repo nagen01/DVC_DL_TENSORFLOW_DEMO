@@ -3,6 +3,7 @@ numpy
 dvc
 argparse
 tensorflow
+joblib
 
 #Installing the local setup
 -e .

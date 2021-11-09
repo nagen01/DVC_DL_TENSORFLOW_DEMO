@@ -4,6 +4,9 @@ artifacts:
   BASE_MODEL_DIR: base_model
   BASE_MODEL_NAME: VGG16_base_model.h5
   UPDATED_BASE_MODEL_NAME: updated_VGG16_base_model.h5
+  TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
+  CHECKPOINT_DIR: checkpoints
+  CALLBACKS_DIR: callbacks
 
 source_download_dirs:
   - ../outside_data/dog
