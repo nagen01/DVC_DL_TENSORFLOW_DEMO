@@ -4,6 +4,7 @@ dvc
 argparse
 tensorflow
 joblib
+scipy
 
 #Installing the local setup
 -e .

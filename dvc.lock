@@ -5,8 +5,8 @@ stages:
     - python src/stage_01_load_save.py --config=config/config.yaml
     deps:
     - path: config/config.yaml
-      md5: ae49b947d966ca5535b48eee6bc271e4
-      size: 423
+      md5: 5edb6772de6a7bf86aa3d9c40e06d62f
+      size: 443
     - path: src/stage_01_load_save.py
       md5: fc57435284f15c8b76326f46c602c2ad
       size: 1669
@@ -23,8 +23,8 @@ stages:
     - python src/stage_02_prepare_base_model.py --config=config/config.yaml --params=params.yaml
     deps:
     - path: config/config.yaml
-      md5: ae49b947d966ca5535b48eee6bc271e4
-      size: 423
+      md5: 5edb6772de6a7bf86aa3d9c40e06d62f
+      size: 443
     - path: data
       md5: a52ad4b30715598bfd754e3e9c51ef2c.dir
       size: 37934943
@@ -36,8 +36,8 @@ stages:
       md5: cc08f1db70168930bc4debd243ab047c
       size: 586
     - path: src/utils/models.py
-      md5: 1671aad56dbbb5ff6516c1f98b0de831
-      size: 1257
+      md5: edd738eda49cfae4edc3abf03e4b99da
+      size: 1723
     params:
       params.yaml:
         CLASSES: 2
@@ -48,7 +48,7 @@ stages:
         LEARNING_RATE: 0.001
     outs:
     - path: artifacts\base_model
-      md5: b2a7399f57d78172105ecd0500090451.dir
+      md5: 69669d162a8293b3a46c400ea6d1855c.dir
       size: 118054232
       nfiles: 2
   prepare_callbacks:
@@ -56,11 +56,11 @@ stages:
     - python src/stage_03_prepare_callback.py --config=config/config.yaml --params=params.yaml
     deps:
     - path: config/config.yaml
-      md5: ae49b947d966ca5535b48eee6bc271e4
-      size: 423
+      md5: 5edb6772de6a7bf86aa3d9c40e06d62f
+      size: 443
     - path: params.yaml
-      md5: 9bba15301f4a80eb6413b0c1b4be9789
-      size: 60
+      md5: 82e81e0ebed53fdd52206433ac6db245
+      size: 107
     - path: src/stage_03_prepare_callback.py
       md5: 9f4325f7fd1cb3b5b61a6dbebfb89f87
       size: 1753
@@ -68,10 +68,10 @@ stages:
       md5: cc08f1db70168930bc4debd243ab047c
       size: 586
     - path: src/utils/callbacks.py
-      md5: 2d4faabb99e41ecb34d97787cdac7d57
-      size: 1105
+      md5: 867b1ecbb7b672e227c442a775398020
+      size: 1439
     outs:
     - path: artifacts\callbacks
-      md5: 5ca16fc89b23101fc3dcf247536e21fb.dir
+      md5: 0471d6d310e4aa5a66734535a8f8b8a0.dir
       size: 1502
       nfiles: 2

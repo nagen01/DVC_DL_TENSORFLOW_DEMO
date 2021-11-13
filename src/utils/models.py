@@ -1,5 +1,7 @@
+from src.utils.all_utils import get_timestamp
 import tensorflow as tf
 import logging
+import os
 
 def get_VGG_16_model(input_shape, model_path):
     model = tf.keras.applications.vgg16.VGG16(
@@ -34,3 +36,13 @@ def prepare_model(model, CLASSES, freez_all, freez_till, learning_rate):
     full_model.summary()
     return full_model
 
+def load_model(model_path):
+    model = tf.keras.models.load_model(model_path)
+    logging.info(f"model is loaded from {model_path}")
+    return model
+
+def get_unique_path_to_save_model(model_dir, model_name="model"):
+    timestamp = get_timestamp(model_name)
+    unique_model_name = f"{timestamp}.h5"
+    unique_model_path = os.path.join(model_dir, unique_model_name)
+    return unique_model_path
